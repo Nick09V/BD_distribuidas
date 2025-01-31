@@ -5,6 +5,8 @@
 package bd_distribuidas;
 
 import controller.Conexion;
+import controller.ControladorPrincipal;
+import view.VistaPrin;
 
 /**
  *
@@ -18,6 +20,10 @@ public class BD_distribuidas {
     public static void main(String[] args) {
        Conexion conn = new Conexion();
        conn.conectar();
+       
+        VistaPrin vista = new VistaPrin();
+        ControladorPrincipal controlador = new ControladorPrincipal(vista);
+        vista.setVisible(true);
     }
     
 }
